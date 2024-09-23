@@ -1851,6 +1851,11 @@ details.collapse summary::-webkit-details-marker{
   margin-right: auto;
 }
 
+.my-24{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -1883,6 +1888,10 @@ details.collapse summary::-webkit-details-marker{
   margin-top: 2rem;
 }
 
+.mb-24{
+  margin-bottom: 6rem;
+}
+
 .flex{
   display: flex;
 }
@@ -1903,8 +1912,16 @@ details.collapse summary::-webkit-details-marker{
   height: 100%;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .max-h-12{
   max-height: 3rem;
+}
+
+.max-h-screen{
+  max-height: 100vh;
 }
 
 .w-96{

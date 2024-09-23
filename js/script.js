@@ -1,3 +1,11 @@
+
+//FAQ Blog
+document.getElementById("faq-blog").addEventListener('click', function () {
+    document.getElementById("faq-section").classList.remove("hidden");
+    document.getElementById("card-section").classList.add("hidden");
+});
+
+
 //history tab functionality :
 const historyTab = document.getElementById("history-tab");
 const donationTab = document.getElementById("donation-tab");
@@ -24,6 +32,7 @@ historyTab.addEventListener("click", function () {
     );
     document.getElementById("card-section").classList.add("hidden");
     document.getElementById("history-section").classList.remove("hidden");
+    document.getElementById("faq-section").classList.add("hidden");
 });
 
 donationTab.addEventListener("click", function () {
@@ -48,4 +57,5 @@ donationTab.addEventListener("click", function () {
     );
     document.getElementById("card-section").classList.remove("hidden");
     document.getElementById("history-section").classList.add("hidden");
+    document.getElementById("faq-section").classList.add("hidden");
 });

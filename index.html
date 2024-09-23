@@ -59,7 +59,7 @@
     <section class="max-w-6xl sticky top-36 lg:top-20 mx-auto px-3 pt-10 pb-4 bg-white z-10">
       <!-- Tabs for Assistant and History -->
       <div class="flex justify-center gap-10 mb-4">
-        <button id="Donation-tab"
+        <button id="donation-tab"
           class="btn text-lg text-black font-semibold bg-lime-400 hover:bg-lime-500 border-lime-300 hover:border-lime-300 focus:outline-none transition duration-200 px-6">
           Donation
         </button>
@@ -71,7 +71,7 @@
     </section>
 
     <!-- card Section  -->
-    <section class="max-w-6xl mx-auto px-3">
+    <section id="card-section" class="max-w-6xl mx-auto px-3">
       <!-- card-1  -->
       <div class="border rounded-xl p-6 sm:p-8 lg:flex items-center gap-8 mb-10 shadow-sm">
         <!-- img  -->
@@ -193,10 +193,35 @@
       </div>
     </section>
 
+    <!-- History Section -->
+      <div id="history-section"
+        class="max-w-6xl mx-auto px-3 bg-[#F9F7F3] hidden p-4 rounded-lg shadow-md border border-bg-[#F9F7F3]">
+        <h3
+          class="text-lg font-semibold  text-center text-transparent bg-clip-text bg-black">
+          Expense History
+        </h3>
+        <div id="history-list" class="grid grid-cols-2 gap-3">
+        </div>
+      </div>
 
-    <!-- blog section -->
-     
-    <section class="max-w-6xl mx-auto px-3">
+    <!-- alert  -->
+     <section id="popup" class="hidden max-w-6xl mx-auto px-3 flex items-center justify-center text-center">
+      <div class="card bg-neutral text-neutral-content w-96">
+        <div class="card-body items-center text-center space-y-2">
+          <h2 class="card-title text-2xl mb-4">Congrates!</h2>
+          <img src="./assets/coin.png" alt="">
+          <p>You Have Donated for Humankind</p>
+          <h3 class="card-title">Successfully</h3>
+
+          <div class="card-actions justify-end">
+            <button class="btn bg-gray-300">Close Confirmation</button>
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- Important FAQ section -->
+    <section id="faqBlog" class=" hidden max-w-6xl mx-auto px-3">
       <h1 class="text-3xl font-bold mb-6">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
 
       <div class="join join-vertical w-full">
@@ -204,39 +229,49 @@
           <input type="radio" name="my-accordion-4" checked="checked" />
           <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM) ?</div>
           <div class="collapse-content">
-            <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document
-            as a tree of objects, allowing programs to manipulate the document’s structure, style, and content.</p>
+            <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure
+              of a document
+              as a tree of objects, allowing programs to manipulate the document’s structure, style, and content.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4" />
           <div class="collapse-title text-xl font-medium">How do you select an element from the DOM ?</div>
           <div class="collapse-content">
-            <p>Selecting DOM (Document Object Model) elements is a fundamental aspect of web development with JavaScript. It allows
-            developers to interact with and manipulate elements on a webpage dynamically. Proper selection of elements is crucial
-            for tasks such as updating content, adding event listeners, or modifying styles.</p>
+            <p>Selecting DOM (Document Object Model) elements is a fundamental aspect of web development with
+              JavaScript. It allows
+              developers to interact with and manipulate elements on a webpage dynamically. Proper selection of elements
+              is crucial
+              for tasks such as updating content, adding event listeners, or modifying styles.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful ?</div>
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is
+            it useful ?</div>
           <div class="collapse-content">
-            <p>Event delegation in the DOM is a technique where you attach a single event listener to a parent element instead of
-            multiple listeners to individual child elements. This works because events bubble up from the target element to its
-            ancestors.
-            <br> <br>
-            Why is it useful?
-            Efficiency: Reduces the number of event listeners, saving memory and improving performance.
-            Dynamic Content: Handles events for dynamically added elements without needing to attach new listeners. <br>
-            Simplified Code: Makes your code cleaner and easier to manage.</p>
+            <p>Event delegation in the DOM is a technique where you attach a single event listener to a parent element
+              instead of
+              multiple listeners to individual child elements. This works because events bubble up from the target
+              element to its
+              ancestors.
+              <br> <br>
+              Why is it useful?
+              Efficiency: Reduces the number of event listeners, saving memory and improving performance.
+              Dynamic Content: Handles events for dynamically added elements without needing to attach new listeners.
+              <br>
+              Simplified Code: Makes your code cleaner and easier to manage.
+            </p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM ?</div>
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using
+            the DOM ?</div>
           <div class="collapse-content">
-            <p>In web development, one of the main features to enable interactivity is DOM Manipulation. DOM manipulation allows
-            developers to interact and modify the structure, style, and content of web pages dynamically.
+            <p>In web development, one of the main features to enable interactivity is DOM Manipulation. DOM
+              manipulation allows
+              developers to interact and modify the structure, style, and content of web pages dynamically.
           </div>
         </div>
       </div>

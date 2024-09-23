@@ -1090,9 +1090,22 @@ body{
   margin-inline-start: calc(var(--border-btn) * -1);
 }
 
+.order-1{
+  order: 1;
+}
+
+.m-4{
+  margin: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .ml-4{
@@ -1103,12 +1116,56 @@ body{
   margin-right: 0px;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
 .flex{
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
 .max-h-12{
   max-height: 3rem;
+}
+
+.w-1{
+  width: 0.25rem;
+}
+
+.w-1\/2{
+  width: 50%;
+}
+
+.w-1\/3{
+  width: 33.333333%;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.w-2\/6{
+  width: 33.333333%;
+}
+
+.w-3\/4{
+  width: 75%;
 }
 
 .max-w-12{
@@ -1119,12 +1176,40 @@ body{
   flex: 1 1 0%;
 }
 
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.flex-col-reverse{
+  flex-direction: column-reverse;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
 }
 
 .gap-12{
@@ -1135,23 +1220,27 @@ body{
   gap: 0.5rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
+.divide-black > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-divide-opacity));
+}
+
+.border{
+  border-width: 1px;
+}
+
 .border-lime-300{
   --tw-border-opacity: 1;
   border-color: rgb(190 242 100 / var(--tw-border-opacity));
 }
 
-.bg-lime-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(163 230 53 / var(--tw-bg-opacity));
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\]{
-  background-color: ;
+.border-red-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-border-opacity));
 }
 
 .bg-\[\#F9F7F3\]{
@@ -1159,26 +1248,19 @@ body{
   background-color: rgb(249 247 243 / var(--tw-bg-opacity));
 }
 
+.bg-lime-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(163 230 53 / var(--tw-bg-opacity));
+}
+
+.bg-red-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.p-3{
-  padding: 0.75rem;
-}
-
-.p-4{
-  padding: 1rem;
-}
-
-.p-6{
-  padding: 1.5rem;
-}
-
-.px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .px-3{
@@ -1186,14 +1268,9 @@ body{
   padding-right: 0.75rem;
 }
 
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .py-4{
@@ -1201,7 +1278,8 @@ body{
   padding-bottom: 1rem;
 }
 
-.pb-10{
+.py-10{
+  padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 
@@ -1243,6 +1321,75 @@ body{
 .hover\:bg-lime-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(132 204 22 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 640px){
+  .sm\:m-0{
+    margin: 0px;
+  }
+
+  .sm\:my-2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sm\:my-10{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .sm\:mt-0{
+    margin-top: 0px;
+  }
+
+  .sm\:mb-0{
+    margin-bottom: 0px;
+  }
+
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:w-3\/4{
+    width: 75%;
+  }
+
+  .sm\:flex-row{
+    flex-direction: row;
+  }
+
+  .sm\:flex-col{
+    flex-direction: column;
+  }
+
+  .sm\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-between{
+    justify-content: space-between;
+  }
+
+  .sm\:gap-2{
+    gap: 0.5rem;
+  }
+
+  .sm\:space-y-3 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+  }
+
+  .sm\:py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:flex{
+    display: flex;
+  }
 }
 
 @media (min-width: 1024px){

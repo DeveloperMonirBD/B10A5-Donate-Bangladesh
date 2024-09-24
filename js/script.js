@@ -1,7 +1,7 @@
 //FAQ Blog
 document.getElementById("faq-blog").addEventListener("click", function () {
-    document.getElementById("faq-section").classList.remove("hidden");
-    document.getElementById("card-section").classList.add("hidden");
+    document.getElementById("card-section").classList.toggle("hidden");
+    document.getElementById("faq-section").classList.toggle("hidden");
 });
 
 //history tab functionality :
@@ -79,19 +79,48 @@ document
         const navBdt = parseFloat(document.getElementById("Nav-bdt").innerText);
 
         let netBalance = navBdt - firstDonationInput;
-        document.getElementById("Nav-bdt").innerText = netBalance.toFixed(2);
 
+        //net balance validation
         if (netBalance < 0) {
-            alert("Your current balance is : 0");
+            alert(" ⚠️ Invalid Amount!");
+            return;
         }
+
+        document.getElementById("Nav-bdt").innerText = netBalance.toFixed(2);
 
         // popup alert
         const openPopUp = document.getElementById("popup");
         openPopUp.classList.remove("hidden");
-        document.getElementById("close-popup").addEventListener('click', function () {
-            const openPopUp = document.getElementById("popup");
-            openPopUp.classList.add("hidden");
-        });
+        document
+            .getElementById("close-popup")
+            .addEventListener("click", function () {
+                const openPopUp = document.getElementById("popup");
+                openPopUp.classList.add("hidden");
+            });
+
+        //expense history:
+        const donation = document.getElementById("first-card-bdt").innerText;
+        const balance = parseFloat(
+            document.getElementById("Nav-bdt").innerText
+        );
+        const donateTitle = document.getElementById("donate-title").innerText;
+
+        const historyItem = document.createElement("div");
+        historyItem.className =
+            "bg-white p-4 space-y-3 rounded-md border shadow-md";
+
+        historyItem.innerHTML = `
+          <p class="text-xs font-bold text-gray-500">${donation} ${donateTitle}</p>
+          <p class="text-xs text-gray-500">Net Balance: ${balance.toFixed(
+              2
+          )}</p>
+          <p class="text-xs text-gray-500">${new Date()}</p>
+          `;
+
+        const historyContainer = document.getElementById("history-list");
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
+        console.log(historyContainer);
 
         // validation:
         const errorElement = document.getElementById("first-donation-error");
@@ -103,5 +132,4 @@ document
             errorElement.classList.add("hidden");
             hideError("first-donation-error");
         }
-
     });

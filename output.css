@@ -1954,20 +1954,12 @@ details.collapse summary::-webkit-details-marker{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.flex-row{
-  flex-direction: row;
-}
-
-.flex-col{
-  flex-direction: column;
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col-reverse{
@@ -2006,10 +1998,6 @@ details.collapse summary::-webkit-details-marker{
   gap: 0.5rem;
 }
 
-.gap-3{
-  gap: 0.75rem;
-}
-
 .gap-4{
   gap: 1rem;
 }
@@ -2030,12 +2018,6 @@ details.collapse summary::-webkit-details-marker{
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.space-y-3 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -2052,10 +2034,6 @@ details.collapse summary::-webkit-details-marker{
   border-width: 1px;
 }
 
-.border-l-2{
-  border-left-width: 2px;
-}
-
 .border-base-300{
   --tw-border-opacity: 1;
   border-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-border-opacity)));
@@ -2069,11 +2047,6 @@ details.collapse summary::-webkit-details-marker{
 .border-lime-300{
   --tw-border-opacity: 1;
   border-color: rgb(190 242 100 / var(--tw-border-opacity));
-}
-
-.border-indigo-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
 .bg-\[\#F9F7F3\]{
@@ -2111,6 +2084,10 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-90{
+  --tw-bg-opacity: 0.9;
+}
+
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
@@ -2121,20 +2098,16 @@ details.collapse summary::-webkit-details-marker{
      object-fit: cover;
 }
 
+.p-10{
+  padding: 2.5rem;
+}
+
 .p-4{
   padding: 1rem;
 }
 
 .p-6{
   padding: 1.5rem;
-}
-
-.p-3{
-  padding: 0.75rem;
-}
-
-.p-10{
-  padding: 2.5rem;
 }
 
 .px-3{
@@ -2157,21 +2130,12 @@ details.collapse summary::-webkit-details-marker{
   padding-bottom: 1rem;
 }
 
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pb-4{
   padding-bottom: 1rem;
 }
 
 .pt-10{
   padding-top: 2.5rem;
-}
-
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 
 .text-center{

@@ -30,7 +30,7 @@ donationTab.addEventListener('click', function () {
     document.getElementById('faq-section').classList.add('hidden');
 });
 
-// donation card-1 functionality :
+// donation card functionality :
 function handleDonation(cardSelector, donationInputSelector, navSelector, popupSelector, closePopupSelector, historyListSelector, errorSelector, donateTitleSelector) {
     const donationInput = parseFloat(document.querySelector(donationInputSelector).value);
     document.querySelector(donationInputSelector).value = '';

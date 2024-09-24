@@ -46,7 +46,7 @@ function handleDonation(cardSelector, donationInputSelector, navSelector, popupS
 
     // net balance validation
     if (netBalance < 0) {
-        alert(' ⚠️ Invalid Amount!');
+        alert(' ⚠️ Insufficient Balance, Please Add Money First!');
         return;
     }
 
@@ -91,10 +91,17 @@ function handleDonation(cardSelector, donationInputSelector, navSelector, popupS
 }
 
 // Add event listener to the button
+// for 1st card :
 document.getElementById('first-donation-btn').addEventListener('click', function () {
     handleDonation('#first-card-bdt', '#firstDonationInput', '#Nav-bdt', '#popup', '#close-popup', '#history-list', '#first-donation-error', '#donate-title');
 });
 
+// for 1st card :
 document.getElementById('second-donation-btn').addEventListener('click', function () {
     handleDonation('#second-card-bdt', '#secondDonationInput', '#Nav-bdt', '#secondPopup', '#second-close-popup', '#history-list', '#second-donation-error', '#second-donate-title');
+});
+
+// for 1st card :
+document.getElementById('third-donation-btn').addEventListener('click', function () {
+    handleDonation('#third-card-bdt', '#third-donation-input', '#Nav-bdt', '#third-popup', '#third-close-popup', '#history-list', '#third-donation-error', '#third-donate-title');
 });

@@ -55,7 +55,9 @@ function handleDonation(cardSelector, donationInputSelector, navSelector, popupS
     // popup alert
     const openPopUp = document.querySelector(popupSelector);
     openPopUp.classList.remove('hidden');
+    openPopUp.classList.add('flex');
     document.querySelector(closePopupSelector).addEventListener('click', function () {
+        openPopUp.classList.remove('flex');
         openPopUp.classList.add('hidden');
     });
 

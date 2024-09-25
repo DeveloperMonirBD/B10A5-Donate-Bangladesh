@@ -67,18 +67,16 @@ function handleDonation(cardSelector, donationInputSelector, navSelector, popupS
     const donateTitle = document.querySelector(donateTitleSelector).innerText;
 
     const historyItem = document.createElement('div');
-    historyItem.className = 'bg-white p-4 space-y-3 rounded-md border shadow-md';
+    historyItem.className = 'bg-white p-6 space-y-4  rounded-md border shadow-md';
 
     historyItem.innerHTML = `
-        <p class="text-xs font-bold text-gray-500">${donation} ${donateTitle}</p>
-        <p class="text-xs text-gray-500">Net Balance: ${balance.toFixed(2)}</p>
-        <p class="text-xs text-gray-500">${new Date()}</p>
+        <p class="text-md font-bold text-gray-500">${donation} ${donateTitle}</p>
+        <p class="text-md text-gray-500">Net Balance: ${balance.toFixed(2)}</p>
+        <p class="text-md text-gray-500">${new Date()}</p>
     `;
 
     const historyContainer = document.querySelector(historyListSelector);
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-
-    console.log(historyContainer);
 
     // validation:
     const errorElement = document.querySelector(errorSelector);
